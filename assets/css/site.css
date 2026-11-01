@@ -1,0 +1,262 @@
+/* #region ---------- Site Wide Style ---------- */
+/* This section defines the styles used throughout the site */
+
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  --card: #FBFAF7;
+  --grid-line: rgba(4, 4, 4, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.site-header,
+.site-footer,
+main {
+  margin-inline: auto;
+  max-width: 72rem;
+  padding: 1rem;
+}
+
+/* Adds a section divider */
+.section-divider {
+  border-top: 2px solid black;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+}
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- Header and Navigation Section Style ---------- */
+/* This section defines the styles used in the header and navigation section */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #fff;
+  border-bottom: 2px solid black;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Center the links and dropdown arrow within each nav item. */
+.site-header nav > div,
+.nav-projects {
+  display: flex;
+  align-items: center;
+}
+
+/* Anchor the menu to the Projects link and center it underneath. */
+.nav-projects {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  min-width: 14rem;
+  padding: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--grid-line);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+}
+
+/* Show the menu on hover and when keyboard focus is inside the Projects item. */
+.nav-projects:hover .nav-dropdown-menu,
+.nav-projects:focus-within .nav-dropdown-menu {
+  display: grid;
+}
+
+.nav-dropdown-menu a {
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+/* Keep hover support for pointer devices and click support via the is-open class. */
+@media (hover: hover) and (pointer: fine) {
+  .nav-projects:hover .nav-dropdown-menu {
+    display: grid;
+  }
+}
+
+.nav-projects.is-open .nav-dropdown-menu {
+  display: grid;
+}
+
+/* Keep social icons in a compact, aligned row. */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.social-link:hover {
+  opacity: 0.7;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- Intro Section Style ---------- */
+/* This section defines the styles used in the intro section */
+
+/* Defines the layout and style for the intro section */
+main > section[aria-labelledby="intro-heading"] {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  align-items: start;
+  gap: 1rem 2rem;
+}
+
+.profile-picture {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  max-width: 500px;
+  border-radius: 10%;
+  display: block;
+  margin: 1rem auto;
+  align-self: center;
+  height: auto;
+}
+
+.intro-extra {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  main > section[aria-labelledby="intro-heading"] {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}
+
+#quote-text {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+#quote-author {
+  text-align: right;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- About Section Style ---------- */
+/* This section defines the styles used in the about section */
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- Projects Section Style ---------- */
+/* This section defines the styles used in the projects section */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-card {
+    display: grid;
+    background: var(--card);
+    border: 1px solid var(--grid-line);
+    padding: 1.5rem;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    grid-template-columns: minmax(0, 1fr) minmax(10rem, 30%);
+    align-items: start;
+    column-gap: 2rem;
+    height: 20rem;
+}
+
+.project-card h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-card p {
+    margin: 0 0 1rem;
+    font-size: 0.9rem;
+}
+
+.project-card .no {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    color: var(--blueprint);
+    letter-spacing: 0.08em;
+    margin: 0 0 0.75rem;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  align-self: center;
+}
+
+@media (max-width: 600px) {
+  .project-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card-link {
+  display: block;          /* makes the link behave like a box so the grid lays it out properly */
+  text-decoration: none;   /* removes the underline */
+  color: inherit;          /* stops the green link color from being applied */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);                       /* lifts the card up */
+  box-shadow: 0 8px 20px rgba(22, 36, 28, 0.12);   /* soft shadow underneath */
+  border-color: var(--blueprint);                    /* outline turns green */
+}
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- Contact Section Style ---------- */
+/* This section defines the styles used in the contact section */
+
+/* #endregion ------------------------------------- */
