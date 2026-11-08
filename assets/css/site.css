@@ -8,6 +8,11 @@
   --grid-line: rgba(4, 4, 4, 0.5);
 }
 
+html {
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
 * {
   box-sizing: border-box;
 }

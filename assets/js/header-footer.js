@@ -62,6 +62,7 @@ class myFooter extends HTMLElement {
     this.innerHTML = `
     <footer class="site-footer">
       <p>&copy; <span data-current-year></span> spenceranderson.xyz</p>
+      <p>Version 1.0.1</p>
     </footer>
     `;
   }

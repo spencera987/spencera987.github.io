@@ -33,20 +33,28 @@ if (projectMenu) {
 
 //------------------------------------------------------------------------------------
 // Fetch and display the quote of the day
+
 async function fetchQuoteOfTheDay() {
+  // Injecting the free open-source proxy from cors.dev explicitly for ZenQuotes traffic
+  const proxyUrl = "https://proxy.cors.dev/";
+  const apiUrl = "https://zenquotes.io/api/today";
+
   try {
-    // Fetches from a free, public quotes API
-    const response = await fetch('https://allorigins.win');
-    const data = await response.json();
+    const response = await fetch(proxyUrl + apiUrl);
+    if (!response.ok) throw new Error("API or Proxy network error");
     
-    if(data && data[0]) {
-      document.getElementById('quote-text').innerText = `"${data[0].q}"`;
-      document.getElementById('quote-author').innerText = `— ${data[0].a}`;
+    const data = await response.json(); 
+    
+    // ZenQuotes returns an array of objects: [{ q: "text", a: "author", h: "html" }]
+    if (Array.isArray(data) && data.length > 0) {
+      document.getElementById("quote-text").innerText = `"${data[0].q}"`;
+      document.getElementById("quote-author").innerText = `— ${data[0].a}`;
     }
   } catch (error) {
-    // Fallback quote if the API fails
-    document.getElementById('quote-text').innerText = "The only limit to our realization of tomorrow will be our doubts of today.";
-    document.getElementById('quote-author').innerText = "— Franklin D. Roosevelt";
+    // Reliable hardcoded backup if client has strict extension blocks
+    document.getElementById("quote-text").innerText = "The only limit to our realization of tomorrow will be our doubts of today.";
+    document.getElementById("quote-author").innerText = "— Franklin D. Roosevelt";
+    console.error("ZenQuotes Fetch Error:", error);
   }
 }
 fetchQuoteOfTheDay();
