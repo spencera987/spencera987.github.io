@@ -1,0 +1,53 @@
+# ---------- Operating system files ----------
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---------- Editor / IDE settings ----------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# ---------- Logs ----------
+*.log
+npm-debug.log*
+
+# ---------- Environment variables and secrets ----------
+# Never commit passwords, API keys, or tokens
+.env
+.env.*
+*.pem
+*.key
+
+# ---------- Dependencies (if you ever add a build tool) ----------
+node_modules/
+
+# ---------- Build output (Jekyll / bundlers) ----------
+_site/
+.jekyll-cache/
+.sass-cache/
+dist/
+.cache/
+
+# ---------- Backup and temp files ----------
+*.bak
+*.tmp
+*.orig
+*.backup
+
+# ---------- Unprocessed originals ----------
+# Keep large source files (full-res photos, design files) out of the repo.
+# Only commit web-ready versions to assets/.
+*.psd
+*.ai
+*.xcf
+*.raw
+originals/
