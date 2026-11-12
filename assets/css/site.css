@@ -217,13 +217,7 @@ main > section[aria-labelledby="intro-heading"] {
 
 .project-card h3 {
     margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.project-card p {
-    margin: 0 0 1rem;
-    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 .project-card .no {
@@ -236,7 +230,7 @@ main > section[aria-labelledby="intro-heading"] {
 
 .project-card img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: auto;
   object-fit: cover;
   align-self: center;
 }
@@ -263,5 +257,53 @@ main > section[aria-labelledby="intro-heading"] {
 
 /* #region ---------- Contact Section Style ---------- */
 /* This section defines the styles used in the contact section */
+
+/* #endregion ------------------------------------- */
+
+/* #region ---------- Academic Papers Style ---------- */
+/* This section defines the styles used in the academic papers page */
+
+.papers-table-container {
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+  }
+  caption {
+    caption-side: top;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  th {
+    background-color: maroon;
+    color: white;
+  }
+  tr:hover{
+    background-color: rgb(255, 238, 139);
+  }
+  td p{
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  summary {
+    cursor: pointer;
+    list-style-position: outside;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+
+.paper-link {
+  display: inline-flex;
+  img {
+    margin-right: 0.25rem;
+    display: block;
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
 
 /* #endregion ------------------------------------- */
