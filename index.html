@@ -71,7 +71,7 @@
           alt="Spencer Anderson">
 
         <div>
-          <h1 id="intro-heading">Spencer Anderson</h1>
+          <h1 id="intro-heading" style="text-align: center;">Spencer Anderson</h1>
           <p style="text-indent: 50px;"> Hey there! I'm Spencer and this is my personal website. I use it to store my various projects and interests. The website itself is a project and is just something I started for fun. It's still a work in progress so some things may not be fully implemented.</p>
           <p>Feel free to explore the site and check out my projects. If you have any questions or want to get in touch, you can contact me <a href="./index.html#contact-heading">here</a>. Enjoy!</p>
         </div>
@@ -85,48 +85,140 @@
 
       <div class="section-divider"></div>
       <section aria-labelledby="about-heading">
-        <h2 id="about-heading">About Me</h2>
-        <p style="text-indent: 50px;">I'm an aerospace engineer currently working at Honeywell Aerospace as a systems engineer on flight controls. I graduated from Barrett Honors College at Arizona State University in 2023. If you're here for professional reasons, I've linked my resume below. You can also find a link to my LinkedIn profile at the top of the page.</p>
-        <p><a href="./assets/documents/Spencer_Anderson_Resume.pdf" target="_blank" rel="noopener noreferrer">Download My Resume</a></p>
-        <p style="text-indent: 50px;">I'm an Arizona native, born and raised, so I'm a big fan of the Cardianls, Diamondbacks, and Suns even though it causes me immense suffering. I still try to go to a couple games each year. I also enjoy hiking, going to the movies, and spending time with my family and friends. We do trivia every Tuesday and win every time (totally not lying).</p>
-        <h3>Favorite Movies</h3>
-        <ul>
-          <li>Nice Guys</li>
-          <li>Interstellar</li>
-          <li>Other Guys</li>
-          <li>Project Hail Mary</li>
-          <li>American Psycho</li>
-        </ul>
-        <h3>Favorite TV Shows</h3>
-        <ul>
-          <li>Psych</li>
-          <li>Criminal Minds</li>
-          <li>Breaking Bad</li>
-          <li>Nathan For You</li>
-          <li>Trailer Park Boys</li>
-        </ul>
-        <h3>Favorite Animes</h3>
-        <ul>
-          <li>JoJos Bizarre Adventure</li>
-          <li>Jujutsu Kaisen</li>
-          <li>Naruto</li>
-          <li>Blue Lock</li>
-          <li>Hunter x Hunter</li>
-          <li>Attack on Titan</li>
-        </ul>
-        <h3>Favorite Video Games</h3>
-        <ul>
-          <li>Dark Souls</li>
-          <li>Dark Souls 3</li>
-          <li>Civilization V</li>
-          <li>Rainbow Six Siege</li>
-          <li>Balatro</li>
-        </ul>
+        <h1 id="about-heading" style="text-align: center;">About Me</h1>
+
+        <p style="text-align: center;">
+          I graduated from Barrett the Honors College at Arizona State University with a degree in Aerospace Engineering. You can check out my honors thesis and some more of my work under my <a href="./pages/academic-papers.html">Academic Papers </a>project. I currently work as a Systems Engineer at Honeywell Aerospace focused on Fly-By-Wire systems and flight controls. For more information on my work experience and education, my resume is linked below. My LinkedIn can also be found at the top of the page in the navigation menu.
+        </p>
+
+        <p style="text-align: center;">
+          <a href="https://drive.google.com/file/d/1Z107GNWAyrMldeWaDn7Xvud68isTM--V/view?usp=sharing"
+            class="paper-link"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src="./assets/icons/pdf-svgrepo-com.svg" alt="PDF">
+            Spencer Anderson Resume
+          </a>
+        </p>
+
+        <p style="text-align: center;">
+          For a little bit more about me, I was born and raised in Phoenix, Arizona. I enjoy going to the movies, hiking, traveling, crushing at trivia night, and spending time with my family and friends. I'm also a big sports fan, specifically the Cardinals, Suns, and Diamondbacks eventhough they all they do is cause me pain and suffering.
+        </p>
+
+        <h2 style="text-align: center;">Favorites</h2>
+        <div class="tab">
+          <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'movies')">Movies</button>
+          <button class="tablinks" onclick="openCity(event, 'tv-shows')">TV Shows</button>
+          <button class="tablinks" onclick="openCity(event, 'anime')">Anime</button>
+          <button class="tablinks" onclick="openCity(event, 'videogames')">Videogames</button>
+        </div>
+
+        <div id="movies" class="tabcontent">
+          <div class="scroll-gallery">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1TIPL19mjzuM3xEA2aaRxje6lIwlJjRAb&sz=w1000" 
+            alt="Interstellar">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1FcVm7wKkvcFzlhW6A9Zm_YgQCt2gBJtQ&sz=w1000" 
+            alt="The Nice Guys">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1T7dvzcNXCaDA8v4k4pJ7bRzOkiVS47SR&sz=w1000" 
+            alt="Project Hail Mary">
+            <img 
+            src="https://drive.google.com/thumbnail?id=16vYYdN6dUrAMuFsd_d6_ucqeHtt8KpxO&sz=w1000" 
+            alt="The Other Guys">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1tyIP8hjlBVKT9ZZzzNfxx4plN1nh1jc-&sz=w1000" 
+            alt="American Psycho">
+            <img
+            src="https://drive.google.com/thumbnail?id=1TjF9MPf9NOSuuNQ1GUpN11Su7NZ-MhSs&sz=w1000"
+            alt="Avengers: Infinity War">
+            <img
+            src="https://drive.google.com/thumbnail?id=1dlEWkX31EFqg0Y5XphRutUcfe9nj5JBt&sz=w1000"
+            alt="Scream">
+          </div>
+        </div>
+
+        <div id="tv-shows" class="tabcontent">
+          <div class="scroll-gallery">
+            <img 
+            src="https://drive.google.com/thumbnail?id=12tVAIOTTI1V0tvL8h4tpPx5cQ_0EL5JY&sz=w1000" 
+            alt="Psych">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1EU5i0z5Jmq-F5RnnVUm25hrFP68fTHNm&sz=w1000" 
+            alt="Parks and Recreation">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1HWdufKMWNAjzVqjEqwRPPaH5KxmjKt9i&sz=w1000" 
+            alt="Criminal Minds">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1QKqtiZ4lP3v516RDXL37JBvQkXEv3NkE&sz=w1000" 
+            alt="Trailer Park Boys">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1RT2MeMcups-N0AVYZlzSRvZxc5PNb8yo&sz=w1000" 
+            alt="Regular Show">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1fYU6zpRh8CD29kOBKiXl-cNqFtnOvPCW&sz=w1000" 
+            alt="Mindhunter">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1Yf88RHmx2lsYp-rK1vbEla966GGO4yuV&sz=w1000" 
+            alt="Breaking Bad">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1chqrDDGNArmFf0UII1rNKrYXGv0Ophiq&sz=w1000" 
+            alt="Nathan For You">
+          </div>
+        </div>
+
+        <div id="anime" class="tabcontent">
+          <div class="scroll-gallery">
+            <img 
+            src="https://drive.google.com/thumbnail?id=17zvc7d69Fp-2oDWQOzEYwFxjVcZV3WX4&sz=w1000" 
+            alt="Jujutsu Kaisen">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1h-vKrMLElRjtbM4TbXAzXegIHI1yTntR&sz=w1000" 
+            alt="Jojo's Bizarre Adventure">
+            <img 
+            src="https://drive.google.com/thumbnail?id=13UpCsogZtG4yak34qrme3VqwZW1feAq4&sz=w1000" 
+            alt="Blue Lock ">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1K0llJZatXIgLrNbwkBlHhn-HPQnTHCEl&sz=w1000" 
+            alt="Hunter x Hunter">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1oSlLYdAH09Cj6o47F7PTLl9IO4zyuZ66&sz=w1000" 
+            alt="Attack on Titan">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1JlJYZmM5hhSfwV5z4sP9hBiQ4eNBvXA9&sz=w1000" 
+            alt="Naruto">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1x5oW7xbg624tJhLd8YwVyR5k1Q8fnm1b&sz=w1000" 
+            alt="Naruto Shippuden">
+          </div>
+        </div>
+
+        <div id="videogames" class="tabcontent">
+          <div class="scroll-gallery">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1743cOAofjQYkcHPrNeIcJZhZr6MZDUuc&sz=w1000" 
+            alt="Dark Souls">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1LlPtu-2cKrDf69fmmlcfuv99exspn9bQ&sz=w1000" 
+            alt="Dark Souls 3">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1KslfEBsbd7jA56IbaX8VUtjpl_34rW-Q&sz=w1000" 
+            alt="Civilization 5">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1pDtJQQ_3xVfw-V88Vk8MSAa_jSfU2PPp&sz=w1000" 
+            alt="Rainbow Six Siege">
+            <img 
+            src="https://drive.google.com/thumbnail?id=1W4GVc7Xm2QIZVQk6QesFsoI0A26RIiXg&sz=w1000" 
+            alt="Balatro">
+          </div>
+        </div>
+
       </section>
 
       <div class="section-divider"></div>
       <section aria-labelledby="project-heading">
-        <h2 id="project-heading">Projects</h2>
+        <h1 id="project-heading" style="text-align: center;">Projects</h1>
 
         <p>Here are some of the projects I've worked on. Click on a project to learn more about it.</p>
 
@@ -205,7 +297,7 @@
 
     <footer class="site-footer">
       <p>&copy; <span data-current-year></span> spenceranderson.xyz</p>
-      <p>Version 1.1.1</p>
+      <p>Version 1.1.2</p>
     </footer>
 
     <script src="./assets/js/site.js" defer></script>
